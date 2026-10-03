@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bioferia 2027 · Entrada digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob blob-tl"></div>
+  <div class="blob blob-br"></div>
+
+  <main class="page">
+    <header class="head">
+      <h1>BIOFERIA</h1>
+      <p class="year">2027</p>
+    </header>
+
+    <section class="ticket-card">
+      <button class="ticket-btn" id="ticketBtn" aria-label="Mostrar código QR de la entrada">
+        <!-- ACÁ VA TU IMAGEN DEL TICKET -->
+        <img class="ticket" src="img/ticket3.png" alt="Ticket Bioferia 2027">
+      </button>
+      <p class="hint">Apretar ticket para escanear código QR</p>
+    </section>
+
+    <h2 class="section-title">ENTRADA DIGITAL</h2>
+
+    <section class="info-card">
+      <ul class="info-list">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+          <div><span class="label">FECHA</span><strong>25 · 04 · 27</strong></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>
+          <div><span class="label">LUGAR</span><strong>Hipódromo de Palermo<br>Buenos Aires</strong></div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9a2 2 0 0 0 0 6v3h18v-3a2 2 0 0 1 0-6V6H3z"/><path d="M15 6v12" stroke-dasharray="2 2"/></svg>
+          <div><span class="label">TIPO DE ENTRADA</span><strong>General</strong></div>
+        </li>
+      </ul>
+
+      <div class="valid">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        ENTRADA VÁLIDA
+      </div>
+
+      <div class="code">
+        <span class="label">CÓDIGO</span>
+        <strong>BF-2027-003</strong>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ventana del QR -->
+  <div class="modal" id="qrModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="Código QR de la entrada">
+      <div id="qrBox" class="qr-box"></div>
+      <p class="qr-code">BF-2027-003</p>
+      <button class="close" id="closeBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
